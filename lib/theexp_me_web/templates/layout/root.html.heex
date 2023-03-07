@@ -5,26 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="csrf-token" content={csrf_token_value()}>
-    <%= live_title_tag assigns[:page_title] || "TheexpMe", suffix: " · Phoenix Framework" %>
+    <%= live_title_tag assigns[:page_title] || "The EXP", suffix: " - Tell My Story" %>
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
   </head>
-  <body>
-    <header>
-      <section class="container">
-        <nav>
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-            <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-              <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-            <% end %>
-          </ul>
-        </nav>
-        <a href="https://phoenixframework.org/" class="phx-logo">
-          <img src={Routes.static_path(@conn, "/images/phoenix.png")} alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
+  <body class="bg-gray-100">
+    <!-- Header section -->
+    <header class="bg-white shadow-sm">
+      <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="#" class="text-lg font-bold text-gray-800">The EXP</a>
+        <ul class="hidden md:flex space-x-4">
+          <li><a href="#" class="text-gray-600 hover:text-gray-800">Investor</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800">Technology</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800">Developer</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800">Food</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800">Travel</a></li>
+        </ul>
+        <button class="md:hidden focus:outline-none">
+          <svg class="w-6 h-6 text-gray-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </nav>
+      <div class="md:hidden bg-gray-200 py-2">
+        <ul class="flex flex-col space-y-2">
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 block px-4 py-2">Investor</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 block px-4 py-2">Technology</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 block px-4 py-2">Developer</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 block px-4 py-2">Food</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 block px-4 py-2">Travel</a></li>
+        </ul>
+      </div>
     </header>
+
     <%= @inner_content %>
+
+    <!-- Footer section -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4 flex flex-wrap justify-between items-center">
+        <p class="text-center md:text-left">&copy; 2023 The EXP. All rights reserved.</p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-facebook fa-2x"></i></a>
+          <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-medium fa-2x"></i></a>
+          <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-reddit fa-2x"></i></a>
+          <a href="#" class="text-gray-400 hover:text-gray-300"><i class="fab fa-line fa-2x"></i></a>
+        </div>
+      </div>
+
+    </footer>
+    <!-- Load JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // Mobile menu toggle
+      $(function () {
+        $('button').click(function () {
+          $('.md\\:hidden').toggleClass('hidden');
+        });
+      });
+    </script>
   </body>
 </html>
