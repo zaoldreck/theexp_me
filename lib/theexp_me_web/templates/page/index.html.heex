@@ -1,41 +1,104 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>Peace of mind from prototype to production</p>
+<!-- Hero section -->
+<section class="hero bg-gradient-to-r from-blue-500 to-indigo-500">
+  <div class="container mx-auto py-20 text-center text-white">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Tell Your Story</h1>
+    <p class="text-lg md:text-xl mb-8">The EXP is a platform where you can share your experiences about investing,
+      technology, development, food, and travel.</p>
+    <a href="#"
+      class="bg-white text-blue-500 py-2 px-4 md:px-6 rounded-full font-bold hover:bg-blue-500 hover:text-white">Join
+      Now</a>
+  </div>
 </section>
 
-<section class="row">
-  <article class="column">
-    <h2>Resources</h2>
-    <ul>
-      <li>
-        <a href="https://hexdocs.pm/phoenix/overview.html">Guides &amp; Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix/blob/v1.6/CHANGELOG.md">v1.6 Changelog</a>
-      </li>
-    </ul>
-  </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://web.libera.chat/#elixir">#elixir on Libera Chat (IRC)</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-      <li>
-        <a href="https://elixir-slackin.herokuapp.com/">Elixir on Slack</a>
-      </li>
-      <li>
-        <a href="https://discord.gg/elixir">Elixir on Discord</a>
-      </li>
-    </ul>
-  </article>
+<!-- About section -->
+<section class="about py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">About Us</h2>
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">Our Mission</h3>
+        <p class="text-gray-600 leading-loose">Our mission is to provide a platform where people can share their
+          experiences about investing, technology, development, food, and travel, and inspire others to explore and
+          try new things.</p>
+      </div>
+      <div class="w-full md:w-1/2 px-4 mb-8">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">Our Vision</h3>
+        <p class="text-gray-600 leading-loose">Our vision is to create a global community where people can learn from
+          each other, grow together, and make a positive impact on the world.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- Featured section -->
+<section class="featured bg-gray-200 py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">Featured Stories</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/500x300.png?text=Image+1" alt="Image 1"
+          class="w-full h-48 md:h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl md:text-2xl font-bold mb-2">Investing in Tesla</h3>
+          <p class="text-gray-600 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat
+            volutpat. Donec malesuada risus ac magna tincidunt, eu interdum urna rhoncus. Ut bibendum nunc euismod
+            augue consequat.</p>
+          <a href="#" class="text-blue-500 font-bold hover:text-blue-700">Read more</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/500x300.png?text=Image+2" alt="Image 2"
+          class="w-full h-48 md:h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl md:text-2xl font-bold mb-2">Building a Mobile App</h3>
+          <p class="text-gray-600 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat
+            volutpat. Donec malesuada risus ac magna tincidunt, eu interdum urna rhoncus. Ut bibendum nunc euismod
+            augue consequat.</p>
+          <a href="#" class="text-blue-500 font-bold hover:text-blue-700">Read more</a>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="https://via.placeholder.com/500x300.png?text=Image+3" alt="Image 3"
+          class="w-full h-48 md:h-64 object-cover">
+        <div class="p-4">
+          <h3 class="text-xl md:text-2xl font-bold mb-2">Discovering New Cuisines</h3>
+          <p class="text-gray-600 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat
+            volutpat. Donec malesuada risus ac magna tincidunt, eu interdum urna rhoncus. Ut bibendum nunc euismod
+            augue consequat.</p>
+          <a href="#" class="text-blue-500 font-bold hover:text-blue-700">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact section -->
+<!-- <section class="contact py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">Contact Us</h2>
+    <form action="#" method="POST" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+        <input type="text" id="name" name="name"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+          required>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+        <input type="email" id="email" name="email"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+          required>
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+        <textarea id="message" name="message"
+          class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"
+          required></textarea>
+      </div>
+      <div class="col-span-2">
+        <button type="submit"
+          class="bg-blue-500 text-white py-2 px-4 rounded-full font-bold hover:bg-blue-700">Submit</button>
+      </div>
+    </form>
+  </div>
+</section> -->

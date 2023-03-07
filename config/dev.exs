@@ -26,7 +26,8 @@ config :theexp_me, TheexpMeWeb.Endpoint,
   secret_key_base: "5xRgQtNAuAUeLbc9nmNWJ4dCBYN6zf9rL8MkPebCR3mek79YR/lz7rl+5b2k6IaP",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
   ]
 
 # ## SSL Support
